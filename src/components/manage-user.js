@@ -112,7 +112,7 @@ class ManageUser extends Component {
         })
     }
     deleteContact = (id) => {
-        instance.delete(`/user/delete`)
+        instance.delete(`/user/delete/${id}`)
             .then(res => {
                 if (res.data.succeed === true) {
                     alert("Xoá thành công")
